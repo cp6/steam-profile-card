@@ -1,0 +1,174 @@
+body {
+    background: #202020;
+}
+
+a, a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+a, a:hover {
+    font-family: 'Anton', sans-serif;
+    font-size: 51px;
+    color: inherit;
+    padding: 0px;
+}
+
+p {
+    padding: 0px;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 51px;
+    letter-spacing: 5px;
+    text-shadow: 6px 3px #000000;
+}
+
+h3 {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 34px;
+    letter-spacing: 5px;
+    text-shadow: 6px 3px #000000;
+}
+
+.r-p {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-shadow: 6px 3px #000000;
+}
+
+h1:hover {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 51px;
+    letter-spacing: 6px;
+    text-shadow: 5px 3px #18f7ac;
+}
+
+.well {
+    margin-top: 20px;
+    background: #313131;
+    border: 1px solid #18f7ac;
+    box-shadow: 8px 10px 15px #000000;
+}
+
+.details {
+    font-family: 'Asap', sans-serif;
+    font-size: 27px;
+    color: white;
+    text-shadow: 5px 2px #000000;
+}
+
+.details:hover {
+    font-family: 'Asap', sans-serif;
+    font-size: 27px;
+    color: white;
+    text-shadow: 5px 2px #000000;
+}
+
+.game-details {
+    font-family: 'Asap', sans-serif;
+    font-size: 19px;
+    color: white;
+    text-shadow: 5px 2px #000000;
+}
+
+.game-details-orange {
+    font-family: 'Asap', sans-serif;
+    font-size: 19px;
+    color: #ff7c44;
+    text-shadow: 5px 2px #000000;
+}
+
+.rp-green {
+    border: 1px solid #18f7ac;
+    margin-bottom: 6px;
+}
+
+.rp-blue {
+    border: 1px solid #5bffe7;
+    margin-bottom: 6px;
+}
+
+.rp-pink {
+    border: 1px solid #e94ab6;
+    margin-bottom: 6px;
+}
+
+.rp-purple {
+    border: 1px solid #9863e9;
+    margin-bottom: 6px;
+}
+
+.rpimg {
+    padding-top: 15px;
+}
+
+.img-circle {
+    /*box-shadow: 7px 6px 9px #18f7ac;*/
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+th {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 22px;
+    text-shadow: 6px 3px #000000;
+    text-align: center;
+    padding: 1px;
+}
+
+td {
+    padding: 1px;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 0;
+    vertical-align: middle;
+}
+
+.tableme {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: white;
+    background: transparent;
+    text-shadow: 6px 3px #000000;
+    margin: 0px;
+}
+
+tr:nth-child(odd):hover td {
+    background: #9863e9;
+    color: black;
+}
+
+tr:nth-child(even):hover td {
+    background: #e94ab6;
+    color: black;
+}
+
+.friends {
+    letter-spacing: 0px;
+}
+.table-img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.details-tb {
+    font-family: 'Asap', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-shadow: 5px 2px #000000;
+}
