@@ -1,5 +1,7 @@
-# steam profile card
-### Steam profile card with friends and games list
+# Steam profile card
+### Fully responsive steam profile card with friends and games list
+
+Has changing variables such as colors for profile status and checks to ensure certain data is available from the user.
 
 Create a cron job (every 5, 10 or 15 so minutes) and point it at 
 
