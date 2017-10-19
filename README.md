@@ -1,5 +1,5 @@
-# steam-profile-card
-Steam profile card with friends and games list
+# steam profile card
+### Steam profile card with friends and games list
 
 Create a cron job (every 5, 10 or 15 so minutes) and point it at 
 
