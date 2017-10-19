@@ -34,8 +34,8 @@ $data = json_decode(file_get_contents("" . $steamid . ".json"));
                 if ($data->profile_state == 0) {echo "<p class='details' style='color:#ff2b23;'>" . profile_status($data->profile_state) . "</p>";} elseif ($data->profile_state == 1) {
                     echo "<p class='details' style='color:lawngreen;'>" . profile_status($data->profile_state) . "</p>";} else {echo "<p class='details'>" . profile_status($data->profile_state) . "</p>";
                 };
-                echo "<p class='details'>" . $data->gamecount . " Games</p>";
-                echo "<p class='details'>" . $data->friendcount . " Friends</p>";
+                echo "<p class='details'><a href='games.php?steamid=".$steamid."' class='details'>" . $data->gamecount . " Games</a></p>";
+                echo "<p class='details'><a href='friends.php?steamid=".$steamid."' class='details'>" . $data->friendcount . " Friends</a></p>";
                 $levelup_p = ($data->steam_xp / $data->xp_levelup * 100);
                 echo "<p class='details'>Level " . $data->steam_level . "</p>";
                 echo "<p class='details'>Badges: " . $data->badge_count . "</p>";
