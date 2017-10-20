@@ -5,7 +5,7 @@ Has changing variables such as colors for profile status, has hover effects and 
 
 ### Setup:
 
-Serach this repository for `$api_key = '';` and put in your steam api key betweeen the ''
+Search this repository for `$api_key = '';` and put in your steam api key betweeen the ''
 
 Create a cron job (every 5, 10 or 15 so minutes) and point it at 
 
