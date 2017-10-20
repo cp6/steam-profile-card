@@ -1,7 +1,9 @@
 # Steam profile card
 ### Fully responsive steam profile card with friends and games list
 
-Has changing variables such as colors for profile status and checks to ensure certain data is available from the user.
+Has changing variables such as colors for profile status, has hover effects and checks to ensure certain data is available from the user.
+
+### Setup:
 
 Create a cron job (every 5, 10 or 15 so minutes) and point it at 
 
@@ -13,7 +15,7 @@ Create a cron job (every 5, 10 or 15 so minutes) and point it at
    
  with `X` being the steam profile you wanna get data for.
    
- These 3 calls create json files with formatted data which is what we use on the profile cards. Now you can go to `index.php?steamid=X` and youre good to go your profile cards is made.
+ These 3 calls create .json files with formatted data which is what we use on the profile cards. Now you can go to `index.php?steamid=X` and youre good to go, your profile cards is made.
  
  Technologies used:
  
