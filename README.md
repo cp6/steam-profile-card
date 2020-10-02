@@ -25,10 +25,11 @@ Create a cron job (every 5, 10 or 15 so minutes) and point it at
  * HTML & CSS
  * Steam API
 
-Images:
 
 Images:
 
-![Alt Text](https://imgur.com/a/7EXWD)
-![Alt Text](https://imgur.com/a/EjJWq)
-![Alt Text](https://imgur.com/a/7yEzN)
+![Alt Text](https://i.imgur.com/xItJj84.png)
+
+![Alt Text](https://i.imgur.com/mRwcaWv.png)
+
+![Alt Text](https://i.imgur.com/azMHWq9.png)
