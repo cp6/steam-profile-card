@@ -1,6 +1,7 @@
 <?php
 ini_set('max_execution_time', 180);
 $api_key = '';
+
 function profile_status($call)
 {
     $state = '';
@@ -26,16 +27,16 @@ function game_count($steamid)
 {
     global $api_key;
     $data = json_decode(file_get_contents("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=" . $api_key . "&steamid=" . $steamid . "&include_played_free_games=0&include_appinfo=1"));
-    $games_count = $data->response->game_count;
-    return $games_count;
+    return $data->response->game_count;
 }
+
 function friend_count($steamid)
 {
     global $api_key;
     $data = json_decode(file_get_contents("https://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=" . $api_key . "&steamid=" . $steamid . "&relationship=friend"));
-    $friends_count = count($data->friendslist->friends);
-    return $friends_count;
+    return count($data->friendslist->friends);
 }
+
 //hours to mins converters
 function convertToHoursMins($time, $format = '%02d:%02d')
 {
@@ -46,6 +47,7 @@ function convertToHoursMins($time, $format = '%02d:%02d')
     $minutes = ($time % 60);
     return sprintf($format, $hours, $minutes);
 }
+
 function time_elapsed_string($datetime, $full = false)
 {
     $now = new DateTime;
@@ -72,6 +74,7 @@ function time_elapsed_string($datetime, $full = false)
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
+
 function rp($steamid, $number)
 {
     global $api_key;
@@ -90,10 +93,12 @@ function rp($steamid, $number)
     $rplaytime_converted1 = convertToHoursMins($rp1played_forever, '%02d Hours, %02d Minutes');
     return array('game' => $rp1name, 'appid' => $rp1appid, 'played2weeks' => $rp1played_2, 'playedforever' => $rp1played_forever, 'played2weeksc' => $rplaytime2_converted1, 'playedforeverc' => $rplaytime_converted1, 'logo' => $rp1logo, 'icon' => $rp1icon);
 }
+
 function game_logo($appid, $logo)
 {
     return "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/" . $appid . "/" . $logo . ".jpg";
 }
+
 function game_link($appid)
 {
     return "http://steamcommunity.com/app/" . $appid . "";

@@ -1,7 +1,23 @@
 <?php
-$steamid = $_GET['steamid'];
-$data = json_decode(file_get_contents("" . $steamid . "_games.json"), true);
-$data2 = json_decode(file_get_contents("" . $steamid . ".json"));
+if (isset($_GET['steamid'])) {
+    $steamid = $_GET['steamid'];
+} else {
+    echo "?steamid= is missing";
+    exit;
+}
+if (file_exists("{$steamid}_games.json")) {
+    $data = json_decode(file_get_contents("{$steamid}_games.json"), true);
+} else {
+    echo "{$steamid}_games.json does not exist";
+    exit;
+}
+if (file_exists("{$steamid}.json")) {
+    $data2 = json_decode(file_get_contents("{$steamid}.json"));
+} else {
+    echo "{$steamid}.json does not exist";
+    exit;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +44,7 @@ $data2 = json_decode(file_get_contents("" . $steamid . ".json"));
                 echo "<thead><th class='details-tb'>Logo</th>";
                 echo "<th class='details-tb'>Game</th>";
                 echo "<th class='details-tb'>Played</th></thead>";
-                foreach ($data['gameslist'] as $theentity2)
-                {
+                foreach ($data['gameslist'] as $theentity2) {
                     $appid = $theentity2['gameid'];
                     $name = $theentity2['game'];
                     $logo = $theentity2['logo'];
@@ -37,7 +52,7 @@ $data2 = json_decode(file_get_contents("" . $steamid . ".json"));
                     $playtimec = $theentity2['playtimec'];
                     $playtime2weeks = $theentity2['playtime2weeksc'];
                     echo "<tr>";
-                    echo "<td><a href='http://steamcommunity.com/app/$appid' title=$name><img src='https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/".$appid."/".$logo.".jpg' class='img-rounded table-img img-responsive'></a></td>";
+                    echo "<td><a href='http://steamcommunity.com/app/$appid' title=$name><img src='https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/" . $appid . "/" . $logo . ".jpg' class='img-rounded table-img img-responsive'></a></td>";
                     echo "<td><p class='details-tb'>$name</p></td>";
                     echo "<td><p class='details-tb'>$playtime</p></td>";
                     echo "</tr>";
@@ -53,7 +68,7 @@ $data2 = json_decode(file_get_contents("" . $steamid . ".json"));
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script type='text/javascript' src='tablesorter.min.js'></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("#stats").tablesorter();
     });
 </script>
